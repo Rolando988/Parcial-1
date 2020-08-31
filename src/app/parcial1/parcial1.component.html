@@ -1,0 +1,40 @@
+<div class="header"> 
+    <h1>Productos de Variedad</h1>
+    <p>Ingrese sus datos y realice su compra</p>
+  </div>
+  <label>Nombres</label>
+  <input type="text"[(ngModel)]="nombre">
+  <label>Dui Cliente</label>
+  <input type="text"[(ngModel)]="duicliente">
+ 
+  <br><br>
+  <button class="button"(click)="compra1()">Producto 1</button>
+  <br><br>
+  <button class="button"(click)="compra2()">Producto 2</button>
+  <br><br>
+  <button class="button"(click)="compra3()">Producto 3</button>
+  <br><br>
+  <button class="button"(click)="compra4()">Producto 4</button>
+  <br><br>
+  <button class="button"(click)="compra5()">Producto 5</button>
+<br><br>  
+<table [hidden]="contador==0">
+    <tr>
+    <th>Nombres</th>
+    <th>Dui</th>
+    <th>Codigo </th>
+    <th>Descripción</th>
+    <th>Precio</th>
+</tr>
+<tbody>
+    <tr *ngFor="let tcliente of registro">
+        <td>{{tcliente.nombre}}</td>
+        <td>{{tcliente.duicliente}}</td>
+        <td>{{tcliente.codigoproducto}}</td>
+        <td>{{tcliente.descripcionproducto}}</td>
+        <td>{{tcliente.precio}}</td>
+
+    </tr>
+</tbody>
+
+</table>
